@@ -1,0 +1,24 @@
+[project]
+name = "jts-youtube-transcript"
+version = "1.0.0"
+description = "Turn a YouTube video into a clean, Markdown-ready transcript (captions first, local Whisper fallback)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Javier Torres Studios" }]
+dependencies = [
+    "yt-dlp>=2024.1.1",
+]
+
+[project.optional-dependencies]
+whisper = ["faster-whisper>=1.0.0"]
+
+[project.scripts]
+jts-youtube-transcript = "jts_youtube_transcript:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jts_youtube_transcript"]
