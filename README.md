@@ -10,6 +10,8 @@ Cascades through three sources, cheapest first:
 
 Supports members-only / login-required videos by borrowing your logged-in browser session.
 
+> **A note on `--cookies-from-browser`:** this borrows the YouTube login session already sitting in *your own* browser, on *your own* machine, at the moment you run the command — nothing is uploaded, stored, or shared. It only works for content the account running it already has legitimate access to (your own membership, a private video you were personally given access to, etc.). It cannot be used to reach someone else's private or members-only content. Use it only on your own account and only for videos you're authorized to view.
+
 ## Install & run (any OS)
 
 The fastest path uses [`uv`](https://docs.astral.sh/uv/), a Python package manager that handles the virtual environment and dependencies for you — nothing to configure by hand.
